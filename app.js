@@ -3,24 +3,40 @@ const app = Vue.createApp({
     return {
       counter: 0,
       name: "",
+      lastname: "",
+      // fullname: "",
     };
   },
+
+  watch: {
+    counter(value) {
+      if (value >= 100 || value < 0) this.counter = 0;
+    },
+  },
+
+  computed: {
+    fullname() {
+      if (this.name === "") return "";
+      return this.name + " " + this.lastname;
+    },
+  },
+
   methods: {
     ppC() {
       return this.counter++;
     },
 
     mmC() {
-      if (this.counter > 0) return this.counter--;
-      else return 0;
+      return this.counter--;
     },
 
     submitForm(event) {
-      alert(this.name);
+      alert(this.fullname);
     },
 
     resetBut() {
       this.name = "";
+      this.lastname = "";
     },
   },
 });

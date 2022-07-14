@@ -17,14 +17,14 @@
   </header>
   <section id="events">
     <h2>Events in Action</h2>
-    <button v-on:click="ppC()">Add</button>
-    <button v-on:click="mmC()">Remove</button>
+    <button @click="ppC()">Add</button>
+    <button @click="mmC()">Remove</button>
     <p>Result: {{ counter }}</p>
     <input type="text" v-model="name">
     <input type="text" v-model="lastname">
-    <button v-on:click="resetBut()">Reset input</button>
+    <button @click="resetBut()">Reset input</button>
     <p>name: {{fullname}}</p>
-    <form v-on:submit.prevent="submitForm($event)">
+    <form @submit.prevent="submitForm($event)">
       <input type="text">
       <button>Sign Up</button>
     </form>

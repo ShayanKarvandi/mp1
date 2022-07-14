@@ -1,4 +1,4 @@
-const app = Vue.createApp({
+const mp01 = Vue.createApp({
   data() {
     return {
       counter: 0,
@@ -41,4 +41,4 @@ const app = Vue.createApp({
   },
 });
 
-app.mount("#events");
+mp01.mount("#events");
